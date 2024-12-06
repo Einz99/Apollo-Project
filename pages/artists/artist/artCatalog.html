@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist's Catalog</title>
+    <link rel="stylesheet" href="../../../css/artCatalog.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <script src="https://kit.fontawesome.com/d9e96eb9b3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="../../../assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="../../../index.html" class="brand"><img src="../../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../../../index.html">Home</a>
+                <a href="../artist.html" class="active">Artists</a>
+                <a href="../shop.html">Shop</a>
+                <a href="../../about.html">About</a>
+                <a href="../../contact/contact.html">Contact</a>
+        </div>
+        
+        <script src="../../../js/header.js"></script>
+    </header>
+    <section id="container">
+        <div class="ArtImg"  id="banner">
+            <div class="img">
+                <img src="../../../assets/test.png" alt="">
+            </div>
+            <div class="title">
+                ARTIST NAME <a href="#"><i class="fa-brands fa-spotify"></i></a>
+            </div>
+        </div>
+        <div class="content">
+            <div class="albums">
+                <div class="albTitle">Albums</div>
+                <swiper-container 
+                    class="card--list"  
+                    speed="500" 
+                    loop="true" 
+                    pagination="true" 
+                    pagination-dynamic-bullets="true" 
+                    space-between="50" 
+                    centered-slides="true"
+                    id="Album"
+                  >
+                </swiper-container>
+            </div>
+            <div class="albums">
+                <div class="albTitle">EPs</div>
+                <swiper-container 
+                    class="card--list"  
+                    speed="500" 
+                    loop="true" 
+                    pagination="true" 
+                    pagination-dynamic-bullets="true" 
+                    space-between="40" 
+                    centered-slides="true"
+                    id="EPs"
+                  >
+                </swiper-container>
+            </div>
+            <div class="albums">
+                <div class="albTitle">Singles</div>
+                <swiper-container 
+                    class="card--list"  
+                    speed="500" 
+                    loop="true" 
+                    pagination="true" 
+                    pagination-dynamic-bullets="true" 
+                    space-between="40" 
+                    centered-slides="true"
+                    id="Singles"
+                  >
+                </swiper-container>
+            </div>
+        </div>
+        <div class="backbtn">
+            <i class="fa-solid fa-arrow-left"></i>
+        </div>
+    </section>
+    <script src="../../../js/artCatalog.js"></script>
+    
+    <footer>
+        <hr>
+        <p>©️ 2024 Apollo+ Entertainment, Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

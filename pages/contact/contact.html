@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Apollo+ Ent</title>
+    <link rel="stylesheet" href="../../css/contact.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" type="image" href="../../assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="brand"><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../../index.html">Home</a>
+                <a href="../artists/artist.html">Artists</a>
+                <a href="../artists/shop.html">Shop</a>
+                <a href="../about.html">About</a>
+                <a href="#" class="active">Contact</a>
+        </div>
+        
+        <script src="../../js/header.js"></script>
+    </header>
+    <section class="contact">
+        <div class="content">
+            <h2>Contact Us</h2>
+            <p>We'd loved to hear from you! We appreciate your questions, comments and feedback, or partnership inquiries. Feel free to reach out to us using the contact information provided below or by completing the contact form.</p>
+        </div>
+        <div class="container">
+            <div class="contactInfo">
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-location-dot"></i></div>
+                    <div class="text">
+                        <h3>Address</h3>
+                        <p>MXV9+GJF, Maysan Rd<br>
+                            Valenzuela, Metro Manila</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-phone"></i></div>
+                    <div class="text">
+                        <h3>Phone</h3>
+                        <p>6391234567890</p>
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="icon"><b></b><i class="fa-solid fa-envelope"></i></div>
+                    <div class="text">
+                        <h3>Email</h3>
+                        <p>apolloentertainment@gmail.com</p>
+                    </div>
+                </div>
+                
+                <h2 class="txt">Connect with us</h2>
+                <ul class="sci">
+                    <li><a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="https://www.instagram.com/san.rayyy?igsh=MWpwamw0OTNocmViZQ=="><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="https://x.com/positiviSTAY?t=OBzg7zTppq4kQvGMYVfbtQ&s=09"><i class="fa-brands fa-instagram"></i></a></li>
+                </ul>
+                <h2 class="txt1">Want be part of our family</h2><br>
+                <a href="apply.html" class="apply">Apply Now!</a>
+            </div>
+            <div class="contactForm">
+                <form onsubmit="emailSend(); reset(); return false">
+                    <h2>Send Message</h2>
+                    <div class="inputBox">
+                        <input type="text" id="name" required="required">
+                        <span>Full Name</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="text" id="email" required="required">
+                        <span>Email</span>
+                    </div>
+                    <div class="inputBox">
+                        <textarea required="required" id="texts"></textarea>
+                        <span>Type your Message..</span>
+                    </div>
+                    <div class="inputBox">
+                        <input type="submit" value="Send">
+                    </div>
+                </form>
+            </div>
+        </div>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="../../js/contact.js"></script>
+    </section>
+    
+    <footer>
+        <hr>
+        <p>©️ 2024 Apollo+ Entertainment, Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

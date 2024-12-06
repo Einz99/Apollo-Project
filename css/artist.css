@@ -1,0 +1,239 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+header {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+}
+
+.sticky {
+    position: sticky;
+    background-color: #000;
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a {
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+header .navigation .navigation-items .active {
+    color: #FFD700;
+}
+
+.logo {
+    height: 125px;
+    width: 250px;
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .home .media-icons {
+        right: 15px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+        z-index: 99999;
+    }
+
+    
+    header .navigation .navigation-items a {
+        color: #000;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a::before {
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation .navigation-items {
+        background-color: #fff;
+        width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rbg(1 1 1 / 20%);
+    }
+
+    .menu-btn {
+        background: url(../assets/homeAssets/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../assets/homeAssets/close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+        z-index: 999999;
+    }
+
+}
+
+
+section .banner {
+    width: 80%;
+    height: auto;
+    display: flex;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 15%);
+    box-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 40px #FFD700;
+    video {
+        width: 100%;
+        height: 75%;
+    }
+}
+
+.title {
+    color: #fff;
+    font-size: 5rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.gotoLists {
+    display: flex;
+    justify-content: center;
+}
+
+
+.gotoLists a.button {
+    margin: 100px;
+    position: relative;
+    display: inline-block;
+    font-size: 1.5em;
+    letter-spacing: .1em;
+    color: #FFD700;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 2px solid #FFD700;
+    padding: 10px 30px;
+    width: 40%;
+    z-index: 1;
+    overflow: hidden;
+    transition: 1s, box-shadow .5s;
+    text-align: center;
+}
+
+.gotoLists a.button:hover {
+    transition-delay: 0s, 1s;
+    color: #fff;
+    box-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 40px #FFD700,
+    0 0 80px #FFD700,
+    0 0 160px #FFD700;
+}
+
+.gotoLists a.button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -50px;
+    width: 0%;
+    height: 100%;
+    background-color: #FFD700;
+    transform: skewX(35deg);
+    z-index: -1;
+    transition: 1s;
+}
+
+.gotoLists a.button:hover:before {
+    width: 100%;
+}
+
+footer {
+    color: #FFD700;
+    padding: 30px;
+    font-size: 10px;
+    text-align: end;
+    margin-top: 20px;
+    hr {
+        width: 95%;
+        font-size: 10px;
+        margin: auto;
+    }
+    p {
+        margin-right: 50px;
+    }
+}

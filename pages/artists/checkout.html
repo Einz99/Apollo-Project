@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../../css/checkout.css">
+    <script src="https://kit.fontawesome.com/d9e96eb9b3.js" crossorigin="anonymous"></script>
+    <link rel="icon" type="image" href="../../assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="brand"><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../../index.html">Home</a>
+                <a href="../artists/artist.html">Artists</a>
+                <a href="../artists/shop.html" class="active">Shop</a>
+                <a href="../about.html">About</a>
+                <a href="../contact/contact.html">Contact</a>
+        </div>
+        
+    <script src="../../js/header.js"></script>
+    </header>
+    <section>
+        <div class="backShop" id="back"><i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <div class="confirmation" id="confirm">
+            <h1>Remove the item?</h1><br>
+            <div class="lineup">
+                <h2>Item</h2><button id="yes">Yes</button><button id="no">No</button>
+            </div>
+        </div>
+        <div class="content">
+            <div class="informations" id="infos">
+                <form>  
+                    <div class="information">
+                    <h2>Payment Form</h2>
+                    
+                        <div class="input_box">
+                            <span class="title">Full Name</span>
+                            <div class="icon">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" placeholder="Your Full Name" id="name" required>
+                            </div>
+                        </div>
+
+                        <div class="input_box">
+                            <span class="title">Email</span>
+                            <div class="icon">
+                                <i class="fa-solid fa-envelope"></i>
+                                <input type="text" placeholder="Your Email" id="email" required>
+                            </div>
+                        </div>
+
+                        <div class="input_box">
+                            <span class="title">Phone Number</span>
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="text" placeholder="Your Phone Number" id="phone" required>
+                            </div>
+                        </div>
+
+                        <div class="input_box">
+                            <span class="title">Address</span>
+                            <div class="icon">
+                                <i class="fa-solid fa-house-user"></i>
+                                <input type="text" placeholder="Your Current Address" id="address" required>
+                            </div>
+                        </div>
+
+                        <div class="input_box">
+                            <span class="title">Postal Code</span>
+                            <div class="icon">
+                                <i class="fa-solid fa-envelopes-bulk"></i>
+                                <input type="text" placeholder="Your Address Postal Code" id="postal" required>
+                            </div>
+                        </div>
+                    
+                    </div>
+                    <div class="payment" id="payment">
+                        
+                    </div>
+                </form>
+            </div>
+            <div class="items">
+                <div class="itembox"  id=items>
+                    <h2>Items:</h2><br>
+                    <span>Qu | item.name</span>
+                    <span class="item--price">4000</span>
+                    <button class="QuantityBtn plus"><i class="fa-solid fa-plus add-to-cart"></i></button><button class="QuantityBtn"><i class="fa-solid fa-minus"></i></button>
+                </div>
+                <div class="totalitems" id="total">
+                    
+                </div>
+            </div>
+        </div>
+        <script src="../../js/checkout.js"></script>
+    </section>
+    
+    <footer>
+        <hr>
+        <p>©️ 2024 Apollo+ Entertainment, Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>

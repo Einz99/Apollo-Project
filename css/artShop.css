@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: #000;
+}
+
+header {
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 200px;
+    transition: 0.5s ease;
+    background-color: #000;
+}
+
+.sticky {
+    position: sticky;
+}
+
+header .brand {
+    color: #fff;
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+header .navigation {
+    position: relative;
+}
+
+header .navigation .navigation-items a{
+    position: relative;
+    color: #fff;
+    font-size: 1em;
+    font-weight: 500;
+    text-decoration: none;
+    margin-left: 30px;
+    transition: 0.3s ease;
+}
+
+header .navigation .navigation-items a:before {
+    content: '';
+    position: absolute;
+    background-color: #fff;
+    width: 0;
+    height: 3px;
+    bottom: 0;
+    left: 0;
+}
+
+header .navigation .navigation-items a:hover:before {
+    width: 100%;
+}
+
+header .navigation .navigation-items .active {
+    color: #FFD700;
+}
+
+.logo {
+    height: 125;
+    width: 250px;
+}
+
+@media (max-width: 1040px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .home .media-icons {
+        right: 15px;
+    }
+
+    header .navigation {
+        display: none;
+    }
+
+    header .navigation.active {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: rgba(1, 1, 1, 0.5);
+        z-index: 99999;
+    }
+
+    
+    header .navigation .navigation-items a {
+        color: #000;
+        font-size: 1.2em;
+        margin: 20px;
+    }
+
+    header .navigation .navigation-items a::before {
+        background: #222;
+        height: 5px;
+    }
+
+    header .navigation .navigation-items {
+        background-color: #fff;
+        width: 600px;
+        margin: 20px;
+        padding: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 5px;
+        box-shadow: 0 5px 25px rbg(1 1 1 / 20%);
+    }
+
+    .menu-btn {
+        background: url(../assets/homeAssets/menu.png)no-repeat;
+        background-size: 30px;
+        background-position: center;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: 0.3s ease;
+    }
+
+    .menu-btn.active {
+        z-index: 999;
+        background: url(../assets/homeAssets/close.png)no-repeat;
+        background-size: 25px;
+        background-position: center;
+        transition: 0.3s ease;
+        z-index: 999999;
+    }
+
+}
+.cart-icon {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    background-color: #FFD700;
+    z-index: 100;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    line-height: 65px;
+    font-size: 2em;
+    span {
+        position: absolute;
+        top: -10px;
+        right: -5px;
+        width: 30px;
+        height: 30px;
+        color: #000;
+        background-color: #FFF;
+        border-radius: 25px;
+        font-size: 20px;
+        line-height: 30px
+    }
+}
+
+.backShop {
+    position: fixed;
+    width: 65px;
+    height: 65px;
+    background-color: #FFD700;
+    z-index: 100;
+    bottom: 15px;
+    left: 15px;
+    border-radius: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    line-height: 65px;
+    font-size: 2em;
+}
+
+.cover {
+    background-image: url(../assets/banner.png);
+    background-size: cover;
+    height: 35vh;
+    width: 95%;
+    background-position: center;
+    border-radius: 10px;
+    margin: 10px auto;
+    box-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 40px #FFD700;
+}
+
+.section-heading {
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 1rem 0 10px 20px;
+    color:#FFD700;
+}
+
+.menu--list {
+    width: 95%;
+    margin: 20px auto;
+    display:flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    margin: 0 auto;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #FFF;
+    padding: 10px 13px;
+    border-radius: 10px;
+    color: #FFF;
+}
+
+.menu-item img {
+    margin-top: 10px;
+    width: 60%;
+}
+
+.card--list {
+    width: 95%;
+    margin: 30px auto 2rem auto;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 190px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 1rem;
+    border-radius: 10px;
+    background-color: black;
+    box-shadow: 0px 10px 15px -3px #FDDC5C;
+    text-align: center;
+    color: #FFF;
+    border: 1.5px solid #FFF;
+    height: auto;
+}
+
+.card img {
+    width: 100%;
+    margin: auto;
+}
+
+.card--price {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.card--price .price {
+    font-weight: 500;
+}
+
+.add-to-cart {
+    background-color: #FFF;
+    color:#000;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.add-to-cart:hover {
+    color: #FFD700;
+    box-shadow:  rgb(255 215 0) 0px 7px 7px, rgb(255, 255, 255) 0px 0px 0px 3px;
+}
+
+swiper-container {
+    width: 95%;
+    margin: auto;
+}
+
+swiper-slide {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+}
+
+.artList {
+    color: #FFF;
+    background-color: #000;
+    width: 50%;
+    font-size: 1.5em;
+    display: flex;
+    margin: 10px auto 50px auto;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    border: 1.5px solid #FFF;
+}
+
+.artList:hover {
+    box-shadow: 
+    0 0 10px #FFD700,
+    0 0 20px #FFD700,
+    0 0 40px #FFD700;
+}
+
+.sidebar {
+    width: 300px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    background-color: #FFF;
+    box-shadow: -4px 0 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    padding: 20px;
+    border-radius: 20px 0 0 20px;
+}
+
+.sidebar.open {
+    right: 0;
+}
+
+.sidebar-close {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.cart-items {
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    gap: 10px;
+    margin-top: 1rem;
+}
+
+.cartItemBox {
+    height: 525px;
+    overflow-y: scroll;
+}
+
+.individual-cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 5px;
+    border-radius: 5px;
+    color: #222;
+    border: 1px black;
+}
+
+.cart-item-price {
+    color: #000;
+}
+
+.side--footer {
+    position: absolute;
+    bottom: 10px;
+    width: 88%;
+}
+
+.total--amount {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 2px solid black;
+    border-radius: 5px;
+    padding: 15px 10px;
+}
+
+.cart-total {
+    font-size: 16px;
+    color: #222;
+    font-weight: 500;
+}
+
+.checkout-btn {
+    width: 100%;
+    margin-top: 2rem;
+    background-color: #FFD700;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+main {
+    padding: 0 5%;
+}
+
+.remove-item {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 2px 8px;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+.artList {
+    color: #FFF;
+}
+
+footer {
+    color: #FFD700;
+    padding: 30px;
+    font-size: 10px;
+    text-align: end;
+    margin-top: 20px;
+    hr {
+        width: 95%;
+        font-size: 10px;
+        margin: auto;
+    }
+    p {
+        margin-right: 50px;
+    }
+}

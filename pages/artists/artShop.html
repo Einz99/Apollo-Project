@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apollo+ Shop</title>
+    <link rel="stylesheet" href="../../css/artShop.css">
+    <script src="https://kit.fontawesome.com/d9e96eb9b3.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+    <link rel="icon" type="image" href="../../assets/favicon.ico">
+</head>
+<body>
+    <header>
+        <a href="../../index.html" class="brand"><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
+        <div class="menu-btn"></div>
+        <div class="navigation">
+            <div class="navigation-items">
+                <a href="../../index.html">Home</a>
+                <a href="../artists/artist.html">Artists</a>
+                <a href="../artists/shop.html" class="active">Shop</a>
+                <a href="../about.html">About</a>
+                <a href="../contact/contact.html">Contact</a>
+        </div>
+        
+    <script src="../../js/header.js"></script>
+    </header>
+    <section class="cover"></section>
+    <main>
+        <div class="cart-icon"><i class="fa-solid fa-cart-shopping"></i>
+            <span>0</span>
+        </div>
+        <div class="backShop"><i class="fa-solid fa-arrow-left"></i>
+        </div>
+        <h2 class="section-heading">Categories</h2>
+        <div class="menu--list" >
+            <div class="menu-item" id="Merch">
+                <img src="../../assets/Category/merch.png" alt="">
+                <br>
+                <h4>Merch</h4>
+            </div>
+            <div class="menu-item" id="Album">
+                <img src="../../assets/Category/album.png" alt="">
+                <br>
+                <h4>Album</h4>
+            </div>
+            <div class="menu-item" id="Wardrobe">
+                <img src="../../assets/Category/wardrobe.png" alt="">
+                <br>
+                <h4>Wardrobe</h4>
+            </div>
+            <div class="menu-item" id="Event">
+                <img src="../../assets/Category/Event.png" alt="">
+                <br>
+                <h4>Event Ticket</h4>
+            </div>
+        </div>
+        <br>
+        <h2 class="section-heading">Items</h2>
+        
+        <swiper-container class="card--list" id="container" slides-per-view="4" speed="500" loop="true" pagination="true" pagination-dynamic-bullets="true" space-between="30" centered-slides="true">
+            <swiper-slide class="card">
+                <img src="../../assets/APOLLO+ LOGO VER2.png" alt="">
+                <h3 class="card--title">Example</h3>
+                <div class="card--price">
+                    <div class="price">P1234</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card">
+                <img src="../../assets/APOLLO+ LOGO VER2.png" alt="">
+                <h3 class="card--title">Example1</h3>
+                <div class="card--price">
+                    <div class="price">P1234</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card">
+                <img src="../../assets/APOLLO+ LOGO VER2.png" alt="">
+                <h3 class="card--title">Example2</h3>
+                <div class="card--price">
+                    <div class="price">P1234</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card">
+                <img src="../../assets/APOLLO+ LOGO VER2.png" alt="">
+                <h3 class="card--title">Example3</h3>
+                <div class="card--price">
+                    <div class="price">P1234</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </swiper-slide>
+            <swiper-slide class="card">
+                <img src="../../assets/APOLLO+ LOGO VER2.png" alt="">
+                <h3 class="card--title">Example4</h3>
+                <div class="card--price">
+                    <div class="price">P1234</div>
+                    <i class="fa-solid fa-plus add-to-cart"></i>
+                </div>
+            </swiper-slide>
+        </swiper-container>
+
+        <div class="sidebar" id="sidebar">
+            <div class="sidebar-close">
+                <i class="fa-solid fa-close"></i>
+            </div>
+            <div class="cart-menu">
+                <h3>My Cart</h3>
+                <div class="cartItemBox">
+                    <div class="cart-items"></div>
+                </div>
+            </div>
+
+            <div class="side--footer">
+                <div class="total--amount">
+                    <h5>Total</h5>
+                    <div class="cart-total">P0.00</div>
+                </div>
+                <button class="checkout-btn">Checkout</button>
+            </div>
+        </div>
+    </main>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="../../js/artShop.js"></script>
+    
+    <footer>
+        <hr>
+        <p>©️ 2024 Apollo+ Entertainment, Inc. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
