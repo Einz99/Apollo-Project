@@ -5,13 +5,14 @@ const cartItemCount = document.querySelector('.media-icons span');
     let CartFromPrevious = sessionStorage.getItem('cartItems')
     let previousItems = CartFromPrevious ? JSON.parse(CartFromPrevious) : [];
     cartItems=previousItems;
+    let Items = 0;
+    let totalItems;
 
     const getJsonData = async () => {
         const res = await fetch('../../json/shops.json');
         const data = await res.json();
         return data;
     }
-
     const displayProducts = async () => {
         const payload = await getJsonData();
     
@@ -23,6 +24,7 @@ const cartItemCount = document.querySelector('.media-icons span');
             }
             return chunks;
         };
+        totalItems = payload.ArtistProduct.length;
     
         const productChunks = chunkArray(payload.ArtistProduct, 6);
     
@@ -51,51 +53,56 @@ const cartItemCount = document.querySelector('.media-icons span');
     
         attachAddToCartEventListeners();
     };
-    
-    // Attach event listeners for add-to-cart buttons
-    const attachAddToCartEventListeners = () => {
-        const addToCartButtons = document.querySelectorAll(".addtocart");
-        addToCartButtons.forEach((button) => {
-            button.addEventListener("click", (event) => {
-                const item = event.target.closest(".item");
-                const itemName = item.querySelector(".itemDesc").textContent.trim();
-                console.log(`Added to cart: ${itemName}`);
-                // Add your cart logic here
-            });
+
+// Attach event listeners for add-to-cart buttons
+const attachAddToCartEventListeners = () => {
+    const cartItemCount = document.querySelector('.media-icons span');
+
+    // Retrieve previous cart items from sessionStorage
+    let CartFromPrevious = sessionStorage.getItem('cartItems');
+    let previousItems = CartFromPrevious ? JSON.parse(CartFromPrevious) : [];
+    let cartItems = previousItems;
+    let cartCount = cartItems.length; // Initialize cart count based on previous items
+
+    // Update the cart count in the UI
+    cartItemCount.textContent = cartCount;
+
+    // Reload previous items to the cart if any
+    if (cartItems.length > 0) {
+        console.log("Restoring previous cart items:", cartItems);
+    }
+
+    const addToCartButtons = document.querySelectorAll(".addtocart");
+    addToCartButtons.forEach((button) => {
+        button.addEventListener("click", (event) => {
+            const item = event.target.closest(".item");
+            const itemName = item.querySelector(".itemDesc").textContent.trim();
+            const itemPrice = itemName.match(/P(\d+)/)[1]; // Extract price from text
+            console.log(`Added to cart: ${itemName} with price P${itemPrice}`);
+
+            // Add the item and its price to the cart array
+            cartItems.push({ name: itemName, price: itemPrice });
+
+            // Increment cart count and update the span
+            cartCount++;
+            cartItemCount.textContent = cartCount;
+
+            // Save updated cart items to sessionStorage
+            sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
         });
-    };
+    });
+};
     
     // Call the function to display products
     displayProducts();
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const container = document.querySelector('.swipe-container');
 const slides = document.querySelectorAll('.swipe');
 const circles = document.querySelectorAll('.circle');
-const Items = document.querySelectorAll('.items');
 const prodItems = document.querySelector('.items-container');
 const prev = document.querySelector('.prev');
 const next = document.querySelector('.next');
-let currentIndex = 1;
+let currentIndex = 0;
 let prodIndex = 0;
 
 // Function to center the active slide
@@ -127,35 +134,23 @@ circles.forEach((circle, index) => {
 
 function switchItemList(index)
 {   
-    if (index < 1) {
-        prev.classList.add('disable');
-    }
-    else
-    {
-        prev.classList.remove('disable');
-    }
-    if(index === Items.length-1){
-        next.classList.add('disable');
-    }
-    else
-    {
-        next.classList.remove('disable');
-    }
     offset = 7.5 - (135 * index);
     prodItems.style.transform = `translateX(${offset}vw)`;
 }
 
 prev.addEventListener('click', () => {
-    if (prodItems === 0) 
-    {return}
-    --prodIndex;
-    switchItemList(prodIndex);
+    if (prodIndex > 0) 
+    {
+        --prodIndex;
+        switchItemList(prodIndex)
+    }
 });
 next.addEventListener('click', () => {
-    if (prodItems === Items.length - 1)
-    {return}
-    ++prodIndex;
-    switchItemList(prodIndex);
+    if (prodIndex !== Math.floor(totalItems/6))
+    {
+        ++prodIndex;
+        switchItemList(prodIndex);
+    }
 });
 
 // Initialize the first slide as active

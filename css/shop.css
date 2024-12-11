@@ -250,9 +250,11 @@ section.products {
     background-color: #fff;
     height: 80%;
     position: relative;
+    text-align: center;
     img {
-        width: 320px;
-        height: 320px;
+        margin-top: 20px;
+        width: 300px;
+        height: 300px;
     }
 }
 
@@ -268,6 +270,7 @@ section.products {
     height: 40px;
     width: 40px;
     background-color: #FFF;
+    z-index: 999999;
 }
 
 .itemDesc {
@@ -278,14 +281,14 @@ section.products {
 
 .next-prev {
     position: absolute; /* Positioning relative to the section */
-    top: 197%; /* Vertically center */
+    top: 215%; /* Vertically center */
     transform: translateY(-50%); /* Adjust for perfect centering */
     left: 0;
     right: 0;
     display: flex;
     justify-content: space-between; /* Push prev to left, next to right */
     padding: 0 20px; /* Space from the edges */
-    z-index: 2; /* Make sure it's above other content */
+    z-index: 0; /* Make sure it's above other content */
     font-size: 50px;
     color: #fff;
     margin: 1.5vw;
