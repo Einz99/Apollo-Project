@@ -1,160 +1,164 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const addToCartButtons = document.querySelectorAll('.add-to-cart');
-    const cartItemCount = document.querySelector('.cart-icon span');
-    const cartItemList = document.querySelector('.cart-items');
-    const cartTotal = document.querySelector('.cart-total');
-    const cartIcon = document.querySelector('.cart-icon');
-    const sidebar = document.getElementById('sidebar');
+const addToCartButtons = document.querySelectorAll('.addtocart');
+const cartItemCount = document.querySelector('.media-icons span');
 
-    let TotalAmount = 0;
     let cartItems = [];
     let CartFromPrevious = sessionStorage.getItem('cartItems')
     let previousItems = CartFromPrevious ? JSON.parse(CartFromPrevious) : [];
     cartItems=previousItems;
-    console.log(cartItems)
-    
-    const attachAddToCartEventListeners = () => {
-        const newAddToCartButtons = document.querySelectorAll('.add-to-cart');
-        newAddToCartButtons.forEach((button, index) => {
-            button.addEventListener('click', () => {
-                const item = {
-                    name: document.querySelectorAll('.card .card--title')[index].textContent,
-                    price: parseFloat(document.querySelectorAll('.price')[index].textContent.slice(1)),
-                    quantity: 1,
-                };
-
-                const existingItem = cartItems.find(
-                    (cartItem) => cartItem.name === item.name,
-                );
-                if (existingItem) {
-                    existingItem.quantity++;
-                } else {
-                    cartItems.push(item);
-                }
-                
-                TotalAmount += item.price;
-                swal("Item Successfully Added to Cart", `${item.name}`, "success"); 
-                updateCartUI();
-            });
-        });
-    };
-
-    const updateCartUI = () => {
-        updateCartItemCount(cartItems.length);
-        updateCartItemList();
-        updateCartTotal();
-    };
-
-    
-
-    const updateCartItemCount = (count) => {
-        cartItemCount.textContent = count;
-    };
-
-    const updateCartItemList = () => {
-        cartItemList.innerHTML = '';
-        cartItems.forEach((item, index) => {
-            const cartItem = document.createElement('div');
-            cartItem.classList.add('cart-item', 'individual-cart-item');
-            cartItem.innerHTML = `
-                <span>${item.quantity} | ${item.name}</span>
-                <span class="cart-item-price">P${(item.price * item.quantity).toFixed(2)}</span>
-                <button class="remove-item" data-index="${index}"><i class="fa-solid fa-times"></i></button>
-            `;
-            cartItemList.append(cartItem);
-        });
-
-        const removeButtons = document.querySelectorAll('.remove-item');
-        removeButtons.forEach((button) => {
-            button.addEventListener('click', (event) => {
-                const index = event.target.dataset.index;
-                removeItemFromCart(index);
-            });
-        });
-    };
-
-    const removeItemFromCart = (index) => {
-        const removedItem = cartItems.splice(index, 1)[0];
-        TotalAmount -= removedItem.price * removedItem.quantity;
-        updateCartUI();
-    };
-
-    const updateCartTotal = () => {
-        cartTotal.textContent = `P${TotalAmount.toFixed(2)}`;
-    };
-
-    cartIcon.addEventListener('click', () => {
-        sidebar.classList.add('open');
-    });
-
-    const closeButton = document.querySelector('.sidebar-close');
-    closeButton.addEventListener('click', () => {
-        sidebar.classList.remove('open');
-    });
-
-    const gotoartList = document.querySelector('.artList');
-    gotoartList.addEventListener('click', () => {
-        sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
-        sessionStorage.setItem('fromShop', true)
-        window.location.href = "artList.html";
-    });
-
-    const scontainer = document.querySelector('#container');
 
     const getJsonData = async () => {
         const res = await fetch('../../json/shops.json');
         const data = await res.json();
         return data;
     }
-    
-    const displaySwipes = async (cat) => {
+
+    const displayProducts = async () => {
         const payload = await getJsonData();
-        console.log(cat)
-        let displayData = payload.ArtistProduct
-        .filter((eventData) => {
-        if (eventData.ProdCat === cat) {
-            return eventData
-        }
-        }).map((object) => {
-        const { ArtName, ProdPic, ProdName, ProdPrice, ProdCat } = object;
     
-        return `
-            <swiper-slide class="card">
-            <img src="${ProdPic}" alt="">
-            <h3 class="card--title">${ArtName} - ${ProdName}</h3>
-            <div class="card--price">
-            <div class="price">P${ProdPrice}</div>
-            <i class="fa-solid fa-plus add-to-cart"></i>
-            </div>
-            </swiper-slide>
-        `
+        // Split products into chunks of 6 items per group
+        const chunkArray = (array, chunkSize) => {
+            const chunks = [];
+            for (let i = 0; i < array.length; i += chunkSize) {
+                chunks.push(array.slice(i, i + chunkSize));
+            }
+            return chunks;
+        };
+    
+        const productChunks = chunkArray(payload.ArtistProduct, 6);
+    
+        // Generate HTML for each chunk
+        let displayData = productChunks.map((chunk) => {
+            const items = chunk.map((object) => {
+                const { ArtName, ProdPic, ProdName, ProdPrice } = object;
+    
+                return `
+                    <div class="item">
+                        <div class="itemImg">
+                            <img src="${ProdPic}" alt="${ProdName}">
+                            <div class="addtocart"><i class="fa-solid fa-cart-shopping"></i></div>
+                        </div>
+                        <div class="itemDesc">${ArtName} - ${ProdName} <br> P${ProdPrice}</div>
+                    </div>
+                `;
+            }).join("");
+    
+            return `<div class="items">${items}</div>`;
         }).join("");
     
-        scontainer.innerHTML = displayData;
+        // Populate the items-container
+        const itemsContainer = document.querySelector(".items-container");
+        itemsContainer.innerHTML = displayData;
+    
         attachAddToCartEventListeners();
-    }
-    displaySwipes(1)
+    };
+    
+    // Attach event listeners for add-to-cart buttons
+    const attachAddToCartEventListeners = () => {
+        const addToCartButtons = document.querySelectorAll(".addtocart");
+        addToCartButtons.forEach((button) => {
+            button.addEventListener("click", (event) => {
+                const item = event.target.closest(".item");
+                const itemName = item.querySelector(".itemDesc").textContent.trim();
+                console.log(`Added to cart: ${itemName}`);
+                // Add your cart logic here
+            });
+        });
+    };
+    
+    // Call the function to display products
+    displayProducts();
+    
 
-    cartItems.forEach(item => {
-        TotalAmount += item.price * item.quantity
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+const container = document.querySelector('.swipe-container');
+const slides = document.querySelectorAll('.swipe');
+const circles = document.querySelectorAll('.circle');
+const Items = document.querySelectorAll('.items');
+const prodItems = document.querySelector('.items-container');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let currentIndex = 1;
+let prodIndex = 0;
+
+// Function to center the active slide
+function updateActiveSlide(index) {
+    // Remove the "active" class from all slides
+    slides.forEach((slide) => slide.classList.remove('active'));
+
+    // Add the "active" class to the selected slide
+    slides[index].classList.add('active');
+
+    offset = 120 - (60 * index);
+    container.style.transform = `translateX(${offset}vw)`;
+}
+
+// Click event to select a slide
+slides.forEach((slide, index) => {
+    slide.addEventListener('click', () => {
+        currentIndex = index;
+        updateActiveSlide(currentIndex);
     });
-    updateCartUI();
-
-    const Merch = document.querySelector('#Merch');
-    Merch.addEventListener('click', () => displaySwipes(1));
-
-    const Album = document.querySelector('#Album');
-    Album.addEventListener('click', () => displaySwipes(3));
-
-    const Wardrobe = document.querySelector('#Wardrobe');
-    Wardrobe.addEventListener('click', () => displaySwipes(2));
-
-    const Events = document.querySelector('#Event');
-    Events.addEventListener('click', () => displaySwipes(4));
-
-    const CheckOutBtn = document.querySelector('.checkout-btn')
-    CheckOutBtn.addEventListener('click', () => {
-        sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
-        window.location.href = "checkout.html"
-    })
 });
+
+circles.forEach((circle, index) => {
+    circle.addEventListener('click', () => {
+        currentIndex = index;
+        updateActiveSlide(currentIndex);
+    });
+});
+
+function switchItemList(index)
+{   
+    if (index < 1) {
+        prev.classList.add('disable');
+    }
+    else
+    {
+        prev.classList.remove('disable');
+    }
+    if(index === Items.length-1){
+        next.classList.add('disable');
+    }
+    else
+    {
+        next.classList.remove('disable');
+    }
+    offset = 7.5 - (135 * index);
+    prodItems.style.transform = `translateX(${offset}vw)`;
+}
+
+prev.addEventListener('click', () => {
+    if (prodItems === 0) 
+    {return}
+    --prodIndex;
+    switchItemList(prodIndex);
+});
+next.addEventListener('click', () => {
+    if (prodItems === Items.length - 1)
+    {return}
+    ++prodIndex;
+    switchItemList(prodIndex);
+});
+
+// Initialize the first slide as active
+updateActiveSlide(currentIndex);
+switchItemList(prodIndex);
+
