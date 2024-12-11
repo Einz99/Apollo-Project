@@ -6,21 +6,21 @@ const SB19 = document.getElementById('SB19');
 
 bini.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Bini");
-    window.location.href="artist/artAbout.html";
+    window.location.href="artist/artAbout.php";
 })
 COJ.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Cup of Joe");
-    window.location.href="artist/artAbout.html";
+    window.location.href="artist/artAbout.php";
 })
 JK.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Juan Karlos Labajo");
-    window.location.href="artist/artAbout.html";
+    window.location.href="../artists/artAbout.php";
 })
 SG.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Sarah Geronimo");
-    window.location.href="artist/artAbout.html";
+    window.location.href="artist/artAbout.php";
 })
 SB19.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "SB19");
-    window.location.href="artist/artAbout.html";
+    window.location.href="artist/artAbout.php";
 })

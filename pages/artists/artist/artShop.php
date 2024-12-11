@@ -13,12 +13,12 @@
 <body>
     <header>
         <a href="#" class="brand"
-              ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+              ><img src="../../../assets/APOLLO+ LOGO VER2.png" class="logo"
             /></a>
             <div class="rightmost1">
               <div class="media-icons">
                 <a
-                  href=""
+                  href="../login.php"
                   ><i class="fa-solid fa-user"></i></a>
                 <a href=""
                   ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a>
@@ -27,10 +27,10 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.html">PROFILE</a>
-              <a href="artCatalog.html">CATALOG</a>
-              <a href="artShop.html">SHOP</a>
-              <a href="artMap.html">MONTHLY ARTIST PLANNER</a>
+              <a href="../../../index.php">PROFILE</a>
+              <a href="artCatalog.php">CATALOG</a>
+              <a href="artShop.php">SHOP</a>
+              <a href="artMap.php">MONTHLY ARTIST PLANNER</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>
@@ -118,7 +118,7 @@
     <div class="footiii">
       <p class="heading">CONTACT US</p>
       <p>For more info about booking, inquiries and audition</p>
-      <a href="pages/contact/contact.html" class="contact"><i>Click here</i></a>
+      <a href="pages/contact/contact.php" class="contact"><i>Click here</i></a>
       <br>
       <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
         ><i class="fab fa-facebook-f"></i

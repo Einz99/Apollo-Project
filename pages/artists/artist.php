@@ -22,7 +22,7 @@
 <body> 
     <header>
         <a href="#" class="brand"
-          ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+          ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="media-icons">
@@ -40,11 +40,11 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="/index.html">Home</a>
-              <a href="pages/artists/artist.html" class="active">Artists</a>
-              <a href="shop.html">Shop</a>
-              <a href="../about.html">About</a>
-              <a href="../contact/contact.html">Contact</a>
+              <a href="/index.php">Home</a>
+              <a href="pages/artists/artist.php" class="active">Artists</a>
+              <a href="shop.php">Shop</a>
+              <a href="../about.php">About</a>
+              <a href="../contact/contact.php">Contact</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>
@@ -52,7 +52,7 @@
           </div>
         </div>
       </header>
-      <script type="text/javascript" src="/js/header.js"></script>
+      <script type="text/javascript" src="../../js/header.js"></script>
 
     <section class="slideshow">
         <div class="banner">
@@ -145,7 +145,7 @@
         <br><br>
       <div class="footHeader">
         <div class="foot1">
-          <img src="/assets/APOLLO+ LOGO VER2.png" class="logo"/>
+          <img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"/>
         </div>
         <div class="foot2">
           <p>
@@ -161,7 +161,7 @@
         <div class="footiii">
           <p class="heading">CONTACT US</p>
           <p>For more info about booking, inquiries and audition</p>
-          <a href="pages/contact/contact.html" class="contact"><i>Click here</i></a>
+          <a href="pages/contact/contact.php" class="contact"><i>Click here</i></a>
           <br>
           <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
             ><i class="fab fa-facebook-f"></i

@@ -12,7 +12,7 @@
 <body>
     <header>
         <a href="#" class="brand"
-          ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+          ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="media-icons">
@@ -30,11 +30,11 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="/index.html">Home</a>
-              <a href="pages/artists/artist.html">Artists</a>
-              <a href="../artists/shop.html">Shop</a>
-              <a href="../about.html">About</a>
-              <a href="../contact/contact.html" class="active">Contact</a>
+              <a href="/index.php">Home</a>
+              <a href="pages/artists/artist.php">Artists</a>
+              <a href="../artists/shop.php">Shop</a>
+              <a href="../about.php">About</a>
+              <a href="../contact/contact.php" class="active">Contact</a>
               <div class="nav-media-icons">
                 <div class="reserved">
                   <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
@@ -43,7 +43,7 @@
           </div>
         </div>
       </header>
-      <script type="text/javascript" src="/js/header.js"></script>
+      <script type="text/javascript" src="../../js/header.js"></script>
     <section class="contact">
         <div class="content">
             <h2>Contact Us</h2>
@@ -81,7 +81,7 @@
                     <li><a href="https://x.com/positiviSTAY?t=OBzg7zTppq4kQvGMYVfbtQ&s=09"><i class="fa-brands fa-instagram"></i></a></li>
                 </ul>
                 <h2 class="txt1">Want be part of our family</h2><br>
-                <a href="apply.html" class="apply">Apply Now!</a>
+                <a href="apply.php" class="apply">Apply Now!</a>
             </div>
             <div class="contactForm">
                 <form onsubmit="emailSend(); reset(); return false">
@@ -113,7 +113,7 @@
         <br><br>
       <div class="footHeader">
         <div class="foot1">
-          <img src="/assets/APOLLO+ LOGO VER2.png" class="logo"/>
+          <img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"/>
         </div>
         <div class="foot2">
           <p>

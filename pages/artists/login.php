@@ -1,30 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apollo+ Monthly Artist Planner</title>
-    <link rel="stylesheet" href="../../../css/headerfooter.css">
-    <link rel="stylesheet" href="../../../css/artMap.css">
-    <link rel="stylesheet" href="../../../css/evo-calendar.min.css">
-    <link rel="stylesheet" href="../../../css/evo-calendar.midnight-blue.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-    <script src="https://kit.fontawesome.com/d9e96eb9b3.js" crossorigin="anonymous"></script>
-    <link rel="icon" type="image" href="../../../assets/favicon.ico">
+<title>About Apollo+ Ent</title>
+    <link rel="stylesheet" href="../../css/artist.css">
+    <link rel="stylesheet" href="../../css/headerfooter.css">
+    <script
+      src="https://kit.fontawesome.com/d9e96eb9b3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="icon" type="image" href="../../assets/favicon.ico">
 </head>
-<body>
+<body> 
     <header>
         <a href="#" class="brand"
-          ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+          ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
+          <div class="media-icons">
+            <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
+              ><i class="fab fa-facebook-f"></i
+            ></a>
+            <a
+              href="https://www.instagram.com/san.rayyy?igsh=MWpwamw0OTNocmViZQ=="
+              ><i class="fab fa-instagram"></i
+            ></a>
+            <a href="https://x.com/positiviSTAY?t=OBzg7zTppq4kQvGMYVfbtQ&s=09"
+              ><i class="fa-brands fa-x-twitter"></i
+            ></a>
+          </div>
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.html">PROFILE</a>
-              <a href="artCatalog.html">CATALOG</a>
-              <a href="artShop.html">SHOP</a>
-              <a href="artMap.html">MONTHLY ARTIST PLANNER</a>
+              <a href="/index.php">Home</a>
+              <a href="pages/artists/artist.php" class="active">Artists</a>
+              <a href="shop.php">Shop</a>
+              <a href="../about.php">About</a>
+              <a href="../contact/contact.php">Contact</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>
@@ -32,32 +49,16 @@
           </div>
         </div>
       </header>
-      <script type="text/javascript" src="../../../js/header.js"></script>
-    <section>
-        <div class="MAP"><span>Monthly Artists Planner</span></div>
-        <div class="container">
-            <div id="calendar"></div>
-            <div class="Legends">
-                <div class="LegTitle">Artist's Color Code</div>
-                <ul>
-                    <li class="a">Sarah Geronimo</li>
-                    <li class="b">SB19</li>
-                    <li class="c">CupOfJoe</li>
-                    <li class="d">Juan Karlos</li>
-                    <li class="e">Bini</li>
-                </ul>
-        </div>
-        </div>
-        <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
-        <script src="../../../js/evo-calendar.min.js"></script>
-        <script src="../../../js/artMap.js"></script>    
-    </section>
-    
-    <footer>
+      <script type="text/javascript" src="/js/header.js"></script>
+
+      <section class="login">
+        
+      </section>
+      <footer>
         <br><br>
       <div class="footHeader">
         <div class="foot1">
-          <img src="/assets/APOLLO+ LOGO VER2.png" class="logo"/>
+          <img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"/>
         </div>
         <div class="foot2">
           <p>
@@ -73,7 +74,7 @@
         <div class="footiii">
           <p class="heading">CONTACT US</p>
           <p>For more info about booking, inquiries and audition</p>
-          <a href="pages/contact/contact.html" class="contact"><i>Click here</i></a>
+          <a href="pages/contact/contact.php" class="contact"><i>Click here</i></a>
           <br>
           <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
             ><i class="fab fa-facebook-f"></i

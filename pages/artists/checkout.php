@@ -10,15 +10,15 @@
 </head>
 <body>
     <header>
-        <a href="../../index.html" class="brand"><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
+        <a href="../../index.php" class="brand"><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"></a>
         <div class="menu-btn"></div>
         <div class="navigation">
             <div class="navigation-items">
-                <a href="../../index.html">Home</a>
-                <a href="../artists/artist.html">Artists</a>
-                <a href="../artists/shop.html" class="active">Shop</a>
-                <a href="../about.html">About</a>
-                <a href="../contact/contact.html">Contact</a>
+                <a href="../../index.php">Home</a>
+                <a href="../artists/artist.php">Artists</a>
+                <a href="../artists/shop.php" class="active">Shop</a>
+                <a href="../about.php">About</a>
+                <a href="../contact/contact.php">Contact</a>
         </div>
         
     <script src="../../js/header.js"></script>

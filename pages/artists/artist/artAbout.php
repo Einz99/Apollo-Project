@@ -13,16 +13,16 @@
 <body>
     <header>
         <a href="#" class="brand"
-          ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+          ><img src="../../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.html">PROFILE</a>
-              <a href="artCatalog.html">CATALOG</a>
-              <a href="artShop.html">SHOP</a>
-              <a href="artMap.html">MONTHLY ARTIST PLANNER</a>
+              <a href="../../../index.php">PROFILE</a>
+              <a href="artCatalog.php">CATALOG</a>
+              <a href="artShop.php">SHOP</a>
+              <a href="artMap.php">MONTHLY ARTIST PLANNER</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>

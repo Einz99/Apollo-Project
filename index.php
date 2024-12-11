@@ -41,10 +41,10 @@
         <div class="navigation">
           <div class="navigation-items">
             <a href="#" class="active">Home</a>
-            <a href="pages/artists/artist.html">Artists</a>
-            <a href="pages/artists/shop.html">Shop</a>
-            <a href="pages/about.html">About</a>
-            <a href="pages/contact/contact.html">Contact</a>
+            <a href="pages/artists/artist.php">Artists</a>
+            <a href="pages/artists/shop.php">Shop</a>
+            <a href="pages/about.php">About</a>
+            <a href="pages/contact/contact.php">Contact</a>
             <div class="reserved">
               <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
             </div>
@@ -99,7 +99,7 @@
           Leading the Show with Apollo+ Entertainment – Where Every Moment
           Shines Bright!
         </p>
-        <a href="pages/about.html">Know More About Us</a>
+        <a href="pages/php.html">Know More About Us</a>
       </div>
       <div class="content">
         <h1>Master of the<br /><span>Stage </span></h1>
@@ -107,7 +107,7 @@
           Experience the Magic with Apollo+ Entertainment – Your Gateway to
           Unforgettable Moments!
         </p>
-        <a href="pages/about.html">Know More About Us</a>
+        <a href="pages/php.html">Know More About Us</a>
       </div>
       <div class="content">
         <h1>Pioneers of<br /><span>Fun</span></h1>
@@ -115,7 +115,7 @@
           Discover the Extraordinary with Apollo+ Entertainment – Turning Dreams
           into Reality!
         </p>
-        <a href="pages/about.html">Know More About Us</a>
+        <a href="pages/php.html">Know More About Us</a>
       </div>
       <div class="content">
         <h1>Champions of<br /><span>Spectacle </span></h1>
@@ -123,7 +123,7 @@
           Join the Revolution with Apollo+ Entertainment – Where Every Event
           Becomes Legendary!
         </p>
-        <a href="pages/about.html">Know More About Us</a>
+        <a href="pages/php.html">Know More About Us</a>
       </div>
 
       <div class="slider-navigation">
@@ -166,7 +166,7 @@
         <div class="footiii">
           <p class="heading">CONTACT US</p>
           <p>For more info about booking, inquiries and audition</p>
-          <a href="pages/contact/contact.html" class="contact"><i>Click here</i></a>
+          <a href="pages/contact/contact.php" class="contact"><i>Click here</i></a>
           <br>
           <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
             ><i class="fab fa-facebook-f"></i

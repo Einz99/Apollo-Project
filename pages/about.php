@@ -22,7 +22,7 @@
 <body> 
     <header>
         <a href="#" class="brand"
-          ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+          ><img src="../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="media-icons">
@@ -40,18 +40,18 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../index.html">Home</a>
-              <a href="artists/artist.html">Artists</a>
-              <a href="artists/shop.html">Shop</a>
+              <a href="../index.php">Home</a>
+              <a href="artists/artist.php">Artists</a>
+              <a href="artists/shop.php">Shop</a>
               <a href="#"  class="active">About</a>
-              <a href="contact/contact.html">Contact</a>
+              <a href="contact/contact.php">Contact</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>
           </div>
         </div>
       </header>
-      <script type="text/javascript" src="/js/header.js"></script>
+      <script type="text/javascript" src="../js/header.js"></script>
     <section>
         <div class="banner">
             <h1>ABOUT</h1>
@@ -106,7 +106,7 @@
         <br><br>
       <div class="footHeader1">
         <div class="foot1">
-          <img src="/assets/APOLLO+ LOGO VER2.png" class="logo"/>
+          <img src="../assets/APOLLO+ LOGO VER2.png" class="logo"/>
         </div>
         </div>
       </div>

@@ -22,12 +22,12 @@
     <body> 
         <header>
             <a href="#" class="brand"
-              ><img src="/assets/APOLLO+ LOGO VER2.png" class="logo"
+              ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
             /></a>
             <div class="rightmost1">
               <div class="media-icons">
                 <a
-                  href=""
+                  href="login.php"
                   ><i class="fa-solid fa-user"></i></a>
                 <a href=""
                   ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a>
@@ -49,11 +49,11 @@
               <div class="menu-btn"></div>
               <div class="navigation">
                 <div class="navigation-items">
-                  <a href="/index.html">Home</a>
-                  <a href="../artists/artist.html">Artists</a>
+                  <a href="/index.php">Home</a>
+                  <a href="../artists/artist.php">Artists</a>
                   <a href="#" class="active">Shop</a>
-                  <a href="../about.html">About</a>
-                  <a href="../contact/contact.html">Contact</a>
+                  <a href="../about.php">About</a>
+                  <a href="../contact/contact.php">Contact</a>
                   <div class="reserved">
                     <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
                   </div>
@@ -61,7 +61,7 @@
               </div>
             </div>
           </header>
-          <script type="text/javascript" src="/js/header.js"></script>]
+          <script type="text/javascript" src="../../js/header.js"></script>
 
           <section class="swiper">
             <div class="swipe-container">
@@ -148,7 +148,7 @@
         <div class="footiii">
           <p class="heading">CONTACT US</p>
           <p>For more info about booking, inquiries and audition</p>
-          <a href="pages/contact/contact.html" class="contact"><i>Click here</i></a>
+          <a href="pages/contact/contact.php" class="contact"><i>Click here</i></a>
           <br>
           <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"
             ><i class="fab fa-facebook-f"></i
