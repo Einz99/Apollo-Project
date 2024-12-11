@@ -158,3 +158,6 @@ section.slideshow .banner {
         column-gap: 10px;
     }
 }
+section.ArtistList {
+    margin-bottom: 50px;
+}

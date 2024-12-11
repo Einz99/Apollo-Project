@@ -99,12 +99,14 @@ section .banner:hover {
     color: white;
     justify-content: end;
     align-content: end;
+    padding-bottom: 3vh;
     h1 {
         color: #FFD700;
         font-size: 100px;
     }
     p {
         font-size: 20px;
+        margin-bottom: 5vh;
     }
 }
 
@@ -115,12 +117,14 @@ section .banner:hover {
     text-align: end;
     justify-content: end;
     align-content: end;
+    padding-bottom: 3vh;
     h1 {
         color: #FFD700;
         font-size: 100px;
     }
     p {
         font-size: 20px;
+        margin-bottom: 5vh;
     }
 }
 

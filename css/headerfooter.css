@@ -47,7 +47,11 @@ header .navigation .navigation-items a{
     font-weight: 700;
     text-decoration: none;
     margin: 20px;
+    transition: 0.5s ease-in;
+    transition-delay: 0.2s;
 }
+
+
 
 header .navigation .navigation-items {
     background-color: #000;
@@ -58,7 +62,13 @@ header .navigation .navigation-items {
     align-items: center;
     justify-content: center;
     border-radius: 5px;
+    text-align: center;
     box-shadow: 0 5px 25px rbg(1 1 1 / 20%);
+}
+
+header .navigation .navigation-items a:hover {
+    text-decoration: underline;
+    color: #FFD700;
 }
 
 header .navigation .navigation-items a::before {
@@ -84,7 +94,7 @@ header .navigation.active {
     justify-content: center;
     align-items: center;
     background: rgba(1, 1, 1, 0.5);
-    z-index: 99999;
+    z-index: 88888;
 }
 
 .reserved {
@@ -355,4 +365,21 @@ footer .license {
     }
     }
     
+}
+
+@media screen and (max-width: 700px) {
+    header .navigation .navigation-items a{
+        color: #FFF;
+        font-size: 2em;
+        font-weight: 700;
+        text-decoration: none;
+        margin: 20px;
+        transition: 0.5s ease-in;
+        transition-delay: 0.2s;
+    }
+    .reserved {
+        i {
+            font-size: 10px;
+        }
+    }
 }

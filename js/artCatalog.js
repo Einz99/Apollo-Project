@@ -1,143 +1,89 @@
-const swiperEl = document.querySelectorAll('swiper-container');
-
-const swiperParams = {
-    slidesPerView: 5,
-    breakpoints: {
-        400: {
-            slidesPerView: 2,
-        },
-        640: {
-            slidesPerView: 3,
-        },
-        1024: {
-            slidesPerView: 4,
-        },
-    },
-    on: {
-        init() {
-            // ...
-        },
-    },
-  };
-
-  swiperEl.forEach(element => {
-    Object.assign(element, swiperParams);
-});
-
-const Album = document.querySelector('#Album');
-const EPs = document.querySelector('#EPs');
-const Singles = document.querySelector('#Singles');
-const Banner = document.querySelector('#banner');
-
 const getJsonData = async () => {
-    const res = await fetch('../../../json/catalog.json');
+    const res = await fetch('../../../json/Catalog.json');
     const data = await res.json();
     return data;
 }
+let totalItems = 0;
 
-
-const displayAlbum = async () => {
-    const Artist = sessionStorage.getItem('FromArtist')
+const displayProducts = async () => {
     const payload = await getJsonData();
-    console.log(payload.Catalogs)
-    console.log(Artist)
-    let displayData = payload.Catalogs
-    .filter((eventData) => {
-    if (eventData.Artist === Artist && eventData.Category === 1) {
-        return eventData
-    }
-    }).map((object) => {
-    const { Embbed } = object;
+    
 
-    return `
-        <swiper-slide class="card">
-            ${Embbed}
-        </swiper-slide>
-    `
+    // Split products into chunks of 6 items per group
+    const chunkArray = (array, chunkSize) => {
+        const chunks = [];
+        for (let i = 0; i < array.length; i += chunkSize) {
+            chunks.push(array.slice(i, i + chunkSize));
+        }
+        return chunks;
+    };
+
+    // Filter products by Artist
+    const artistFilter = sessionStorage.getItem('FromArtist'); // Get the filter value from sessionStorage
+    const filteredProducts = payload.Catalogs.filter((product) => product.Artist === artistFilter);
+    
+    totalItems = payload.Catalogs.filter((product) => product.Artist === artistFilter).length;
+    const productChunks = chunkArray(filteredProducts, 6);
+
+    // Generate HTML for each chunk
+    let displayData = productChunks.map((chunk) => {
+        const items = chunk.map((object) => {
+            const { Embbed, Category } = object;
+
+            let categoryName = "";
+            if (Category == 1) {
+                categoryName = "Albums";
+            } else if (Category == 2) {
+                categoryName = "EPs";
+            } else if (Category == 3) {
+                categoryName = "Single";
+            }
+
+            return `
+                <div class="item">
+                    <div class="itemImg">
+                        ${Embbed}
+                    </div>
+                    <div class="itemDesc">${categoryName}</div>
+                </div>
+            `;
+        }).join("");
+
+        return `<div class="items">${items}</div>`;
     }).join("");
 
-    Album.innerHTML = displayData;
+    // Populate the items-container
+    const itemsContainer = document.querySelector(".items-container");
+    itemsContainer.innerHTML = displayData;
+};
+
+displayProducts();
+
+
+const prodItems = document.querySelector('.items-container');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
+let prodIndex = 0;
+
+function switchItemList(index)
+{   
+    offset = 7.5 - (135 * index);
+    prodItems.style.transform = `translateX(${offset}vw)`;
 }
 
-const displayEPs = async () => {
-    const Artist = sessionStorage.getItem('FromArtist')
-    const payload = await getJsonData();
-    console.log(payload.Catalogs)
-    console.log(Artist)
-    let displayData = payload.Catalogs
-    .filter((eventData) => {
-    if (eventData.Artist === Artist && eventData.Category === 2) {
-        return eventData
+prev.addEventListener('click', () => {
+    if (prodIndex > 0) 
+    {
+        --prodIndex;
+        switchItemList(prodIndex)
     }
-    }).map((object) => {
-        const { Embbed } = object;
-
-        return `
-            <swiper-slide class="card">
-                ${Embbed}
-            </swiper-slide>
-        `
-
-    }).join("");
-
-    EPs.innerHTML = displayData;
-}
-
-const displaySingles = async () => {
-    const Artist = sessionStorage.getItem('FromArtist')
-    const payload = await getJsonData();
-    console.log(payload.Catalogs)
-    console.log(Artist)
-    let displayData = payload.Catalogs
-    .filter((eventData) => {
-    if (eventData.Artist === Artist && eventData.Category === 3) {
-        return eventData
+});
+next.addEventListener('click', () => {
+    if (prodIndex !== Math.floor(totalItems/6))
+    {
+        ++prodIndex;
+        switchItemList(prodIndex);
     }
-    }).map((object) => {
-        const { Embbed } = object;
+});
 
-        return `
-            <swiper-slide class="card">
-                ${Embbed}
-            </swiper-slide>
-        `
-    }).join("");
-
-    Singles.innerHTML = displayData;
-}
-
-const displayBanner = async () => {
-    const Artist = sessionStorage.getItem('FromArtist')
-    const payload = await getJsonData();
-    console.log(payload.Catalogs)
-    console.log(Artist)
-    let displayData = payload.Banner
-    .filter((eventData) => {
-    if (eventData.Artist === Artist) {
-        return eventData
-    }
-    }).map((object) => {
-    const { Artist, BannerImg, Spotify } = object;
-
-    return `
-        <div class="img">
-            <img src="${BannerImg}" alt="">
-        </div>
-        <div class="title">
-            <p>${Artist}</p> <a href="${Spotify}"><i class="fa-brands fa-spotify"></i></a>
-        </div>
-    `
-    }).join("");
-
-    Banner.innerHTML = displayData;
-}
-
-displayBanner()
-displaySingles()
-displayEPs()
-displayAlbum()
-
-const back = document.querySelector('.backbtn')
-    back.addEventListener('click', () => {
-        history.back()
-    })
+switchItemList(prodIndex);
