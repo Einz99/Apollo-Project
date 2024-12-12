@@ -14,7 +14,7 @@ COJ.addEventListener('click', () => {
 })
 JK.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Juan Karlos Labajo");
-    window.location.href="../artists/artAbout.php";
+    window.location.href="artists/artAbout.php";
 })
 SG.addEventListener('click', () => {
     sessionStorage.setItem('FromArtist', "Sarah Geronimo");

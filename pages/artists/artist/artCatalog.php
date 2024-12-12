@@ -22,7 +22,7 @@
               <a href="../../../index.php">PROFILE</a>
               <a href="artCatalog.php">CATALOG</a>
               <a href="artShop.php">SHOP</a>
-              <a href="../contact/contact.php">MONTHLY ARTIST PLANNER</a>
+              <a href="artMap.php">MONTHLY ARTIST PLANNER</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>

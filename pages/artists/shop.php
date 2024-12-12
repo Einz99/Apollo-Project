@@ -67,12 +67,12 @@
 
           <section class="swiper">
             <div class="swipe-container">
-                <div class="swipe" class="active"></div>
-                <div class="swipe"></div>
-                <div class="swipe"></div>
-                <div class="swipe"></div>
-                <div class="swipe"></div>
-            </div>
+                <img src="../../assets/SHOP SLIDER 1.png" alt="" class="swipe" class="active">
+                <img src="../../assets/SHOP SLIDER 2.png" class="swipe">
+                <img src="../../assets/SHOP SLIDER 3.png" alt="" class="swipe">
+                <img src="../../assets/SHOP SLIDER 4.png" alt="" class="swipe">
+                <img src="../../assets/SHOP SLIDER 1.png" alt="" class="swipe">
+</div>
             <div class="circles">
                 <div class="circle"><img src="../../assets/artListAssets/bini.png" alt=""></div>
                 <div class="circle"><img src="../../assets/artListAssets/cup of joe.png" alt=""></div>
@@ -81,10 +81,6 @@
                 <div class="circle"><img src="../../assets/artListAssets/sb19.png" alt=""></div>
             </div>
         </section>
-    
-    <section class="banner">
-          
-    </section>
 
     <section class="products">
         <div class="items-container">
@@ -135,9 +131,6 @@
     <script src="../../js/shop.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
-    <section class="banner">
-
-    </section>
 
     <footer>
         <br><br>

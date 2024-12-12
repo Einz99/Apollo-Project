@@ -40,7 +40,7 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="/index.php">Home</a>
+              <a href="../../../index.php">Home</a>
               <a href="pages/artists/artist.php" class="active">Artists</a>
               <a href="shop.php">Shop</a>
               <a href="../about.php">About</a>
@@ -73,11 +73,11 @@
                     <h2><i>BINI</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://youtube.com/@biniph?si=hSKaAig2LbhOWcPC"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/BINIph.official?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://open.spotify.com/artist/7tNO3vJC9zlHy2IJOx34ga?si=alUweMzkRfeI1M184e--6A"><i class="fa-brands fa-spotify"></i></a>
                     <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
@@ -87,11 +87,11 @@
                     <h2><i>CUP OF JOE</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40cupofjoemusic_%3Fsi%3Dm3sg64NTDEN8ap29&h=AT2T0n0sSBn3xnAsg6MS20GDZbchcQdpkrmKHJUDnIhisDsFFLNC_Pi_PgjOpXavC0UV0IaukaX9BJ8SSRoEWmQq6Cfsn81JFBmWeh6cuSNlD2Wh9NkNLjMOQtezkYgaioLwcA"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/CupOfJoeRecords"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40cupofjoemusic_%3Fsi%3Dm3sg64NTDEN8ap29&h=AT2T0n0sSBn3xnAsg6MS20GDZbchcQdpkrmKHJUDnIhisDsFFLNC_Pi_PgjOpXavC0UV0IaukaX9BJ8SSRoEWmQq6Cfsn81JFBmWeh6cuSNlD2Wh9NkNLjMOQtezkYgaioLwcA"><i class="fa-brands fa-spotify"></i></a>
                     <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
@@ -101,11 +101,12 @@
                     <h2><i>JUAN KARLOS</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://youtube.com/@juankarlosmix?si=cGoFI_2rt6v4n96i"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/JuanKarlosOfficial?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://open.spotify.com/artist/0a4r2EnsevvHCukoJ1xFwJ?si=yGcZWrplT8m60Y-rZ_m_8Q
+"><i class="fa-brands fa-spotify"></i></a>
                     <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
@@ -115,11 +116,11 @@
                     <h2><i>SARAH GERONIMO</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://youtube.com/@justsarahgph?si=LbfbpmlQGZuP2b76"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/sgeronimo25"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://open.spotify.com/artist/6aiCKnIN68hohzU3ZzNq48?si=BvnshzZlSRy5IcDRSwTS4A"><i class="fa-brands fa-spotify"></i></a>
                     <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
@@ -129,11 +130,11 @@
                     <h2><i>SB19</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="#"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://youtube.com/@officialsb19?si=C1QVQ18TxFvXYChW"><i class="fa-brands fa-youtube"></i></a>
                     <a href="#"><i class="fa-brands fa-instagram"></i></a>
                     <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="https://www.facebook.com/SB19Official?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://open.spotify.com/artist/3g7vYcdDXnqnDKYFwqXBJP?si=gEaIlunVQAOj1cQWpdsMag"><i class="fa-brands fa-spotify"></i></a>
                     <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
                 </div>
             </div>
