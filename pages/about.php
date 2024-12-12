@@ -55,12 +55,10 @@
     <section>
         <div class="banner">
             <h1>ABOUT</h1>
-            <img src="../assets/banner.png">
+            <img src="../assets/banner apollo about.png">
         </div>
         <br><br><br><br><br><br>
-        <div class="banner2">
-
-        </div>
+            <img src="../assets/banner 2 about.png" alt="" class="banner2">
     </section>
     <div class="about">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Optio id porro exercitationem officiis quo qui. Magni veritatis impedit tenetur suscipit facilis recusandae atque, ad, sint veniam distinctio eaque temporibus qui?</div>
     <section class="content">
@@ -68,7 +66,7 @@
         <div class="pictures">
           <div class="pic1"></div>
           <div class="pic2"></div>
-          <div class="pic3"></div>
+          <div class="pic3"><img src="../assets/MISSION.png" alt=""></div>
         </div>
         <div class="message">
           <H1>MISSION</H1>
@@ -83,14 +81,14 @@
         <div class="pictures">
           <div class="pic1"></div>
           <div class="pic2"></div>
-          <div class="pic3"></div>
+          <div class="pic3"><img src="../assets/vision.png" alt=""></div>
         </div>
       </div>
       <div class="values">
         <div class="pictures">
           <div class="pic1"></div>
           <div class="pic2"></div>
-          <div class="pic3"></div>
+          <div class="pic3"><img src="../assets/goals.png" alt=""></div>
         </div>
         <div class="message">
           <H1>VALUES</H1>

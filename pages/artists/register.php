@@ -46,15 +46,19 @@ include 'db_connect.php';
         <div class="login1"></div>
         <div class="login2"></div>
         <div class="login3">
-          <H1>LOG IN</H1>
-          <form method="POST" action="login_process.php">
-            <label for="emailorUser">Email:</label>
-            <input type="text" id="emailorUser" name="emailorUser" required>
+          <H1>Register</H1>
+          <form method="POST" action="register_process.php">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="user">User:</label>
+            <input type="text" id="user" name="user" required>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
-            <button type="submit">LOG IN</button>
+            <label for="Confirmpassword">Confirm Password:</label>
+            <input type="password" id="Confirmpassword" name="Confirmpassword" required>
+            <button type="submit">Register</button>
           </form>
-          <a href="register.php">Register Here!</a>
+          <a href="login.php">Already Have Account?</a>
         </div>
         <div class="icons">
         <a href="https://www.facebook.com/ribnan.sangalang.1?mibextid=ZbWKwL"

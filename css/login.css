@@ -1,0 +1,93 @@
+section.login {
+    width: 100vw;
+    height: 100vh;
+}
+
+.icons {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    bottom: 40px;
+    left: 40px;
+    a {
+    font-size: 30px;
+    color: white;
+    text-decoration: none;
+    }
+}
+
+.login1 {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background-color: gold;
+    top: 50%;
+    left: 50%;
+    transform: translate(-51.5%, -52.5%);
+}
+.login2 {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background-color: grey;
+    top: 50%;
+    left: 50%;
+    transform: translate(-48.5%, -47.5%);
+}
+.login3 {
+    position: absolute;
+    width: 50vw;
+    height: 50vh;
+    background-color: black;
+    top: 50%;
+    left: 50%;
+    z-index: 3;
+    transform: translate(-50%, -50%);
+    justify-content: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.login3 {
+    h1 {
+    color: gold;
+    font-size: 70px;
+    }
+    form {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    text-align: left;
+    width: 50%;
+    margin: 0 auto;
+    input {
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+        outline: none;
+        border: none;
+        margin: auto;
+        background-color: black;
+        border-bottom: 2px solid #FFF;
+        border-radius: 0;
+        color: white;
+    }
+    button {
+        margin: 5px auto;
+        width: 50%;
+        height: 40px;
+        border-radius: 25px;
+        background-color: darkgoldenrod;
+        color: #FFF;
+        font-size: 20px;
+        font-weight: 500;
+    }
+    }
+    a {
+        text-decoration: none;
+        color: #FFF;
+    }
+}

@@ -1,0 +1,119 @@
+header .rightmost a{
+    text-decoration: none;
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    padding-right: 50px;
+}
+
+section.carts {
+    width: 100vw;
+    height: 100vh;
+    padding-top: 100px;
+    color: gold;
+    font-size: 50px;
+    text-align: center;
+}
+
+.cart1, .cart2, .cart3 {
+    width: 80vw;
+    height: 70vh;
+    background-color: white;
+    margin: 100px auto;
+    position: absolute;
+}
+
+.cart1 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-53%, -53%);
+    background-color: gold;
+}
+.cart2 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-47%, -47%);
+    background-color: grey;
+}
+.cart3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.items {
+    width: 50%;
+    height: 100%;
+    overflow-y: scroll;
+    ul {
+        display: flex;
+        align-items: center;
+      }
+    li {
+        width: 100%;
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+        display: flex;
+        flex-direction: row;
+        color: black;
+    }
+    .ordern {
+        padding-right: 50px;
+        padding-left: 25px;
+    }
+    .price {
+        padding-left: 60px;
+    }
+}
+
+.payment {
+    background-color: black;
+    width: 40%;
+    height: 90%;
+    margin: auto;
+    border-radius: 25px;
+    color: white;
+}
+
+.PaymentForm {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-size: 20px;
+    label {
+        font-size: 20px;
+    }
+    p {
+        font-size: 20px;
+    }
+    padding-left: 25px;
+    input {
+        width: 75%
+    }
+}
+
+.radiobuttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    input[type="radio"] {
+        transform: scale(.4); /* Scales larger */
+    }
+}
+
+.submit {
+    background-color: gold;
+    color: white;
+    font-size: 40px;
+    border: none;
+    border-radius: 50px;
+    margin: 100px auto;
+}

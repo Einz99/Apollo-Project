@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -29,7 +31,7 @@
                 <a
                   href="login.php"
                   ><i class="fa-solid fa-user"></i></a>
-                <a href=""
+                <a href="dashboard.php"
                   ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a>
               </div>
               <div class="rightmost2">
@@ -81,7 +83,7 @@
         </section>
     
     <section class="banner">
-
+          
     </section>
 
     <section class="products">

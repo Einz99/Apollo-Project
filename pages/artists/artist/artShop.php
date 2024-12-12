@@ -18,7 +18,7 @@
             <div class="rightmost1">
               <div class="media-icons">
                 <a
-                  href="../login.php"
+                  href="../dashboard.php"
                   ><i class="fa-solid fa-user"></i></a>
                 <a href=""
                   ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a>
