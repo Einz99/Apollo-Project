@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist's Catalog</title>
-    <link rel="stylesheet" href="../../../css/headerfooter.css">
-    <link rel="stylesheet" href="../../../css/artCatalog.css">
+    <link rel="stylesheet" href="../../../css/headerfooter.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../css/artCatalog.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
     <script src="https://kit.fontawesome.com/d9e96eb9b3.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="../../../assets/favicon.ico">
 </head>
 <body>
     <header>
-        <a href="#" class="brand"
+        <a href="artAbout.php" class="brand"
           ><img src="../../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.php">PROFILE</a>
-              <a href="artCatalog.php">CATALOG</a>
+              <a href="artProfile.php">PROFILE</a>
+              <a href="#" class="active">CATALOG</a>
               <a href="artShop.php">SHOP</a>
               <a href="artMap.php">MONTHLY ARTIST PLANNER</a>
               <div class="reserved">

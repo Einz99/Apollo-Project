@@ -4,8 +4,8 @@ include 'db_connect.php';
 <!DOCTYPE html>
 <html lang="en">
 <title>About Apollo+ Ent</title>
-    <link rel="stylesheet" href="../../css/login.css">
-    <link rel="stylesheet" href="../../css/headerfooter.css">
+    <link rel="stylesheet" href="../../css/login.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../css/headerfooter.css?v=<?php echo time(); ?>">
     <script
       src="https://kit.fontawesome.com/d9e96eb9b3.js"
       crossorigin="anonymous"
@@ -21,7 +21,7 @@ include 'db_connect.php';
 </head>
 <body> 
     <header>
-        <a href="#" class="brand"
+        <a href="../../index.php" class="brand"
           ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">

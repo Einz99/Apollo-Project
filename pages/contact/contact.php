@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Apollo+ Ent</title>
-    <link rel="stylesheet" href="../../css/contact.css">
-    <link rel="stylesheet" href="../../css/headerfooter.css">
+    <link rel="stylesheet" href="../../css/contact.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../css/headerfooter.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="icon" type="image" href="../../assets/favicon.ico">
 </head>
@@ -30,11 +30,11 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="/index.php">Home</a>
-              <a href="pages/artists/artist.php">Artists</a>
+              <a href="../../index.php">Home</a>
+              <a href="../artists/artist.php">Artists</a>
               <a href="../artists/shop.php">Shop</a>
               <a href="../about.php">About</a>
-              <a href="../contact/contact.php" class="active">Contact</a>
+              <a href="#" class="active">Contact</a>
               <div class="nav-media-icons">
                 <div class="reserved">
                   <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>

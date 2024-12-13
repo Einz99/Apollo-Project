@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Apollo+ Monthly Artist Planner</title>
-    <link rel="stylesheet" href="../../../css/headerfooter.css">
-    <link rel="stylesheet" href="../../../css/artMap.css">
+    <link rel="stylesheet" href="../../../css/headerfooter.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../../css/artMap.css?v=<?php echo time(); ?>">
     <link rel="stylesheet" href="../../../css/evo-calendar.min.css">
     <link rel="stylesheet" href="../../../css/evo-calendar.midnight-blue.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
@@ -14,17 +14,17 @@
 </head>
 <body>
     <header>
-        <a href="#" class="brand"
+        <a href="artAbout.php" class="brand"
           ><img src="../../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.php">PROFILE</a>
+              <a href="artProfile.php">PROFILE</a>
               <a href="artCatalog.php">CATALOG</a>
               <a href="artShop.php">SHOP</a>
-              <a href="artMap.php">MONTHLY ARTIST PLANNER</a>
+              <a href="#" class="active">MONTHLY ARTIST PLANNER</a>
               <div class="reserved">
                 <p>©️ <i>2024 Apollo+ Entertainment, Inc. All Rights Reserved.</i></p>
               </div>

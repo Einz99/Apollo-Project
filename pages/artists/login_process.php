@@ -21,6 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Set session variables and redirect to dashboard
             $_SESSION['user_id'] = $id;
             $_SESSION['username'] = $username;
+            $_SESSION['email'] = $email;
             header("Location: dashboard.php");
             exit();
         } else {

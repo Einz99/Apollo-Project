@@ -13,6 +13,9 @@ section.carts {
     color: gold;
     font-size: 50px;
     text-align: center;
+    .items h1 {
+        margin-bottom: 25px;
+    }
 }
 
 .cart1, .cart2, .cart3 {
@@ -24,21 +27,21 @@ section.carts {
 }
 
 .cart1 {
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-53%, -53%);
+    transform: translate(-53%, -58%);
     background-color: gold;
 }
 .cart2 {
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-47%, -47%);
+    transform: translate(-47%, -52%);
     background-color: grey;
 }
 .cart3 {
-    top: 50%;
+    top: 60%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -55%);
     background-color: white;
     display: flex;
     flex-direction: row;
@@ -49,27 +52,6 @@ section.carts {
     width: 50%;
     height: 100%;
     overflow-y: scroll;
-    ul {
-        display: flex;
-        align-items: center;
-      }
-    li {
-        width: 100%;
-        list-style-type: none;
-        padding: 0;
-        margin: 0;
-        font-size: 20px;
-        display: flex;
-        flex-direction: row;
-        color: black;
-    }
-    .ordern {
-        padding-right: 50px;
-        padding-left: 25px;
-    }
-    .price {
-        padding-left: 60px;
-    }
 }
 
 .payment {
@@ -87,27 +69,18 @@ section.carts {
     flex-direction: column;
     text-align: left;
     font-size: 20px;
+    padding: 0 15px;
     label {
         font-size: 20px;
     }
     p {
         font-size: 20px;
     }
-    padding-left: 25px;
-    input {
+    input[type="text"] {
         width: 75%
     }
 }
 
-.radiobuttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-content: center;
-    input[type="radio"] {
-        transform: scale(.4); /* Scales larger */
-    }
-}
 
 .submit {
     background-color: gold;
@@ -115,5 +88,46 @@ section.carts {
     font-size: 40px;
     border: none;
     border-radius: 50px;
-    margin: 100px auto;
+    margin: 25px auto 0 auto;
+}
+
+.cart-item {
+    font-size: 15px;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.cart-summary div{
+    color: black;
+    font-size: 15px;
+    justify-content: space-between;
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between labels and values */
+    margin: 10px; /* Add some spacing between summary rows */
+}
+
+.name, .address {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.EToD {
+    display: flex;
+    flex-direction: column;
+    margin-top: 5px;
+    gap: 5px;
+    p {
+        text-align: end;
+    }
+}
+
+.lastchilds {
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

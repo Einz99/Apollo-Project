@@ -15,13 +15,13 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="../css/headerfooter.css">
-    <link rel="stylesheet" href="../css/about.css">
+    <link rel="stylesheet" href="../css/headerfooter.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../css/about.css?v=<?php echo time(); ?>">
     <link rel="icon" type="image" href="../assets/favicon.ico">
 </head>
 <body> 
     <header>
-        <a href="#" class="brand"
+        <a href="../index.php" class="brand"
           ><img src="../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">

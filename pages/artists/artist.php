@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Apollo+ Ent</title>
-    <link rel="stylesheet" href="../../css/artist.css">
-    <link rel="stylesheet" href="../../css/headerfooter.css">
+    <link rel="stylesheet" href="../../css/artist.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../css/headerfooter.css?v=<?php echo time(); ?>">
     <script
       src="https://kit.fontawesome.com/d9e96eb9b3.js"
       crossorigin="anonymous"
@@ -21,7 +21,7 @@
 </head>
 <body> 
     <header>
-        <a href="#" class="brand"
+        <a href="../../index.php" class="brand"
           ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
@@ -40,8 +40,8 @@
           <div class="menu-btn"></div>
           <div class="navigation">
             <div class="navigation-items">
-              <a href="../../../index.php">Home</a>
-              <a href="pages/artists/artist.php" class="active">Artists</a>
+              <a href="../../index.php">Home</a>
+              <a href="#" class="active">Artists</a>
               <a href="shop.php">Shop</a>
               <a href="../about.php">About</a>
               <a href="../contact/contact.php">Contact</a>
@@ -67,79 +67,78 @@
     <section class="ArtistList">
         <div class="title">OUR BELOVED ARTISTS</div>
         <div class="container">
-            <div class="cards" id="Bini">
-                <div class="overlay"><img src="../../assets/artListAssets/bini.png"></div>
+            <div class="cards" >
+                <div class="overlay" id="Bini"><img src="../../assets/artListAssets/bini.png"></div>
                 <div class="artistname">
                     <h2><i>BINI</i></h2>
                 </div>
                 <div class="icons">
                     <a href="https://youtube.com/@biniph?si=hSKaAig2LbhOWcPC"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/BINIph.official?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/bini_ph/?hl=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/BINI_ph?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/BINIph.official?mibextid=ZbWKwLhttps://www.facebook.com/BINIph.official?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
                     <a href="https://open.spotify.com/artist/7tNO3vJC9zlHy2IJOx34ga?si=alUweMzkRfeI1M184e--6A"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping" onclick="Binishop()"></i></a>
                 </div>
             </div>
-            <div class="cards" id="COJ">
-                <div class="overlay"><img src="../../assets/artListAssets/cup of joe.png"></div>
+            <div class="cards">
+                <div class="overlay" id="COJ"><img src="../../assets/artListAssets/cup of joe.png"></div>
                 <div class="artistname">
                     <h2><i>CUP OF JOE</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40cupofjoemusic_%3Fsi%3Dm3sg64NTDEN8ap29&h=AT2T0n0sSBn3xnAsg6MS20GDZbchcQdpkrmKHJUDnIhisDsFFLNC_Pi_PgjOpXavC0UV0IaukaX9BJ8SSRoEWmQq6Cfsn81JFBmWeh6cuSNlD2Wh9NkNLjMOQtezkYgaioLwcA"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/CupOfJoeRecords"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://l.messenger.com/l.php?u=https%3A%2F%2Fyoutube.com%2F%40cupofjoemusic_%3Fsi%3Dm3sg64NTDEN8ap29&h=AT2T0n0sSBn3xnAsg6MS20GDZbchcQdpkrmKHJUDnIhisDsFFLNC_Pi_PgjOpXavC0UV0IaukaX9BJ8SSRoEWmQq6Cfsn81JFBmWeh6cuSNlD2Wh9NkNLjMOQtezkYgaioLwcA"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="https://www.youtube.com/channel/UCPq0kgKjpNzryoNbRp5eUyQ"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="instagram.com/cupofjoemusic_"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="twitter.com/cupofjoemusic"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="facebook.com/CupOfJoeRecords"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="open.spotify.com/artist/61nn6nOoLWjVC1ER2qFAvN"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping COJ" onclick="COJShop()"></i></a>
                 </div>
             </div>
-            <div class="cards" id="JK">
-                <div class="overlay"><img src="../../assets/artListAssets/juan karlos.png"></div>
+            <div class="cards">
+                <div class="overlay" id="JK"><img src="../../assets/artListAssets/juan karlos.png"></div>
                 <div class="artistname">
                     <h2><i>JUAN KARLOS</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="https://youtube.com/@juankarlosmix?si=cGoFI_2rt6v4n96i"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/JuanKarlosOfficial?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://open.spotify.com/artist/0a4r2EnsevvHCukoJ1xFwJ?si=yGcZWrplT8m60Y-rZ_m_8Q
-"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="https://www.youtube.com/channel/UC14oPNk-BubCU2aCmtHosLg"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://x.com/karloslabajo__?lang=en"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://x.com/BINI_ph?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="facebook.com/OfficialKarlosLabajo"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="juankarlos.lnk.to/Official_SP"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping JK" onclick="JKShop()"></i></a>
                 </div>
             </div>
-            <div class="cards" id="SG">
-                <div class="overlay"><img src="../../assets/artListAssets/sarah g.png"></div>
+            <div class="cards">
+                <div class="overlay" id="SG"><img src="../../assets/artListAssets/sarah g.png"></div>
                 <div class="artistname">
                     <h2><i>SARAH GERONIMO</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="https://youtube.com/@justsarahgph?si=LbfbpmlQGZuP2b76"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/sgeronimo25"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://open.spotify.com/artist/6aiCKnIN68hohzU3ZzNq48?si=BvnshzZlSRy5IcDRSwTS4A"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="https://www.youtube.com/channel/UCMICTGmlWpf94O442Fc6VSw"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="instagram.com/justsarahgph"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="twitter.com/justsarahg"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="facebook.com/SGeronimo25"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://open.spotify.com/artist/6aiCKnIN68hohzU3ZzNq48"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping SG" onclick="SGShop()"></i></a>
                 </div>
             </div>
-            <div class="cards" id="SB19">
-                <div class="overlay"><img src="../../assets/artListAssets/sb19.png"></div>
+            <div class="cards">
+                <div class="overlay" id="SB19"><img src="../../assets/artListAssets/sb19.png"></div>
                 <div class="artistname">
                     <h2><i>SB19</i></h2>
                 </div>
                 <div class="icons">
-                    <a href="https://youtube.com/@officialsb19?si=C1QVQ18TxFvXYChW"><i class="fa-brands fa-youtube"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                    <a href="https://www.facebook.com/SB19Official?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://open.spotify.com/artist/3g7vYcdDXnqnDKYFwqXBJP?si=gEaIlunVQAOj1cQWpdsMag"><i class="fa-brands fa-spotify"></i></a>
-                    <a href="#"><i class="fa-solid fa-bag-shopping"></i></a>
+                    <a href="https://www.youtube.com/channel/UCm4v7afBTnJKRm4SlfHJzyg"><i class="fa-brands fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/officialsb19"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.twitter.com/SB19Official"><i class="fa-brands fa-x-twitter"></i></a>
+                    <a href="https://www.facebook.com/SB19Official"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.bit.ly/SB19onSpotify"><i class="fa-brands fa-spotify"></i></a>
+                    <a href="#"><i class="fa-solid fa-bag-shopping SB19" onclick="SB19Shop()"></i></a>
                 </div>
             </div>
         </div>
-        <script src="../../js/artist.js"></script>
+        <script src="../../js/artist.js?v=<?php echo time(); ?>"></script>
     </section>
     
     <footer>

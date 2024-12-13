@@ -1,3 +1,10 @@
+body {
+    background-color: #000;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    width: 100%;
+}
+
 footer {
     margin-top: 50px;
     width: 100%;
@@ -252,10 +259,14 @@ section.swiper .circles {
 }
 
 section.banner {
-    width: 80vw;
     height: 30vh;
+    width: 80vw;
     background-color: #fff;
     margin: 0 auto;
+    img {
+        width: 100%;
+        height: 100%;
+    }
 }
 
 
@@ -263,6 +274,7 @@ section.products {
     width: 100vw;
     height: 100vh;
     margin: 10vh 0;
+    overflow-x: hidden;
 }
 
 .items-container {
@@ -297,6 +309,8 @@ section.products {
 }
 
 .itemImg {
+    overflow-x: hidden;
+    scrollbar-width: none;
     width: 100%;
     background-color: #fff;
     height: 100%;
@@ -334,7 +348,7 @@ section.products {
 
 .next-prev {
     position: absolute; /* Positioning relative to the section */
-    top: 165%; /* Vertically center */
+    top: 220%; /* Vertically center */
     transform: translateY(-50%); /* Adjust for perfect centering */
     left: 0;
     right: 0;
@@ -368,7 +382,7 @@ section.products {
     .next-prev {
         padding: 0;
         font-size: 25px;
-        top: 100%
+        top: 200%
     }
 }
 
@@ -377,7 +391,7 @@ section.products {
     .next-prev {
         padding: 0;
         font-size: 25px;
-        top: 100%
+        top: 200%
     }
     .itemImg {
         img {
@@ -395,7 +409,7 @@ section.products {
     
     section.products {
         width: 100vw;
-        height: 175vh;
+        height: 200vh;
         margin: 10vh 0;
     }
     .itemImg {

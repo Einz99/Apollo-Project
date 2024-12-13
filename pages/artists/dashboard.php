@@ -7,13 +7,14 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 $username = $_SESSION['username'];
+$email = $_SESSION['email'];
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
 <title>About Apollo+ Ent</title>
-    <link rel="stylesheet" href="../../css/headerfooter.css">
-    <link rel="stylesheet" href="../../css/dashboard.css">
+    <link rel="stylesheet" href="../../css/headerfooter.css?v=<?php echo time(); ?>">
+    <link rel="stylesheet" href="../../css/dashboard.css?v=<?php echo time(); ?>">
     <script
       src="https://kit.fontawesome.com/d9e96eb9b3.js"
       crossorigin="anonymous"
@@ -29,7 +30,7 @@ $username = $_SESSION['username'];
 </head>
 <body> 
     <header>
-        <a href="#" class="brand"
+        <a href="../../index.php" class="brand"
           ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
         /></a>
         <div class="rightmost">
@@ -57,32 +58,35 @@ $username = $_SESSION['username'];
         <div class="cart2"></div>
         <div class="cart3">
             <div class="items">
-                    <H1>ORDERS</H1>
-                    <li>
-                        <ul><p class="ordern"></p><p class="price"></p></ul>
-                    </li>
+                    <h1>Orders</h1>
             </div>
             <div class="payment">
                 <h1>PAYMENT</h1>
                 <form action="" class="PaymentForm">
-                    <label for="Total Price">Total Price</label>
-                    <p>$300</p>
+                  <div class="name">
                     <label for="Name">Name</label>
                     <input type="text" name="Name" id="Name" required>
+                  </div>
+                  <div class="address">
                     <label for="Address">Adress</label>
                     <input type="text" name="Address" id="Address" required>
+                  </div>
+                  <div class="EToD">
                     <label for="Estimated Time of Delivery">Estimated Time of Delivery</label>
                     <p>7-10days</p>
-                    <label for="Payment">Payment Method</label>
-                    <div class="radiobuttons">
-                        <input type="radio" name="Payment" id="Payment">GCash
+                  </div>
+                  <div class="lastchilds">
+                    <div class="PaymentMethod">
+                      <label for="Payment">Payment Method</label><br>
+                        <input type="radio" name="Payment" id="Payment">GCash<br>
                         <input type="radio" name="Payment" id="Payment">Cash On Delivery (COD)
                     </div>
                     <input type="submit" value="Submit" class="submit">
+                  </div>
                 </form>
             </div>
         </div>
     </section>
-    <script src="../../js/dashboard.js"></script>
+    <script src="../../js/dashboard.js?v=<?php echo time(); ?>"></script>
 </body>
 </html>

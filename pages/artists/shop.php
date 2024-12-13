@@ -6,8 +6,8 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>About Apollo+ Ent</title>
-        <link rel="stylesheet" href="../../css/headerfooter.css">
-        <link rel="stylesheet" href="../../css/shop.css">
+        <link rel="stylesheet" href="../../css/headerfooter.css?v=<?php echo time(); ?>"">
+        <link rel="stylesheet" href="../../css/shop.css?v=<?php echo time(); ?>"">
         <script
           src="https://kit.fontawesome.com/d9e96eb9b3.js"
           crossorigin="anonymous"
@@ -23,13 +23,13 @@
     </head>
     <body> 
         <header>
-            <a href="#" class="brand"
+            <a href="../../index.php" class="brand"
               ><img src="../../assets/APOLLO+ LOGO VER2.png" class="logo"
             /></a>
             <div class="rightmost1">
               <div class="media-icons">
                 <a
-                  href="login.php"
+                  href="dashboard.php"
                   ><i class="fa-solid fa-user"></i></a>
                 <a href="dashboard.php"
                   ><i class="fa-solid fa-cart-shopping"></i><span>0</span></a>
@@ -51,7 +51,7 @@
               <div class="menu-btn"></div>
               <div class="navigation">
                 <div class="navigation-items">
-                  <a href="/index.php">Home</a>
+                  <a href="../../index.php">Home</a>
                   <a href="../artists/artist.php">Artists</a>
                   <a href="#" class="active">Shop</a>
                   <a href="../about.php">About</a>
@@ -65,6 +65,7 @@
           </header>
           <script type="text/javascript" src="../../js/header.js"></script>
 
+          
           <section class="swiper">
             <div class="swipe-container">
                 <img src="../../assets/SHOP SLIDER 1.png" alt="" class="swipe" class="active">
@@ -72,7 +73,7 @@
                 <img src="../../assets/SHOP SLIDER 3.png" alt="" class="swipe">
                 <img src="../../assets/SHOP SLIDER 4.png" alt="" class="swipe">
                 <img src="../../assets/SHOP SLIDER 1.png" alt="" class="swipe">
-</div>
+            </div>
             <div class="circles">
                 <div class="circle"><img src="../../assets/artListAssets/bini.png" alt=""></div>
                 <div class="circle"><img src="../../assets/artListAssets/cup of joe.png" alt=""></div>
@@ -80,6 +81,10 @@
                 <div class="circle"><img src="../../assets/artListAssets/sarah g.png" alt=""></div>
                 <div class="circle"><img src="../../assets/artListAssets/sb19.png" alt=""></div>
             </div>
+        </section>
+
+        <section class="banner">
+        <img src="../../assets/SHOP BANNER 1.png" alt="">
         </section>
 
     <section class="products">
@@ -131,6 +136,9 @@
     <script src="../../js/shop.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
+    <section class="banner">
+        <img src="../../assets/SHOP BANNER 2.png" alt="">
+        </section>
 
     <footer>
         <br><br>

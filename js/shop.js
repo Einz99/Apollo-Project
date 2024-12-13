@@ -62,33 +62,38 @@ const attachAddToCartEventListeners = () => {
     let CartFromPrevious = sessionStorage.getItem('cartItems');
     let previousItems = CartFromPrevious ? JSON.parse(CartFromPrevious) : [];
     let cartItems = previousItems;
-    let cartCount = cartItems.length; // Initialize cart count based on previous items
 
-    // Update the cart count in the UI
-    cartItemCount.textContent = cartCount;
+    // Update the cart count in the UI based on the total quantity
+    const updateCartCount = () => {
+        const totalQuantity = cartItems.reduce((sum, item) => sum + item.quantity, 0);
+        cartItemCount.textContent = totalQuantity;
+    };
 
-    // Reload previous items to the cart if any
-    if (cartItems.length > 0) {
-        console.log("Restoring previous cart items:", cartItems);
-    }
+    updateCartCount(); // Initialize the count on load
 
     const addToCartButtons = document.querySelectorAll(".addtocart");
     addToCartButtons.forEach((button) => {
         button.addEventListener("click", (event) => {
             const item = event.target.closest(".item");
             const itemName = item.querySelector(".itemDesc").textContent.trim();
-            const itemPrice = itemName.match(/P(\d+)/)[1]; // Extract price from text
-            console.log(`Added to cart: ${itemName} with price P${itemPrice}`);
+            const itemPrice = parseFloat(itemName.match(/P(\d+)/)[1]); // Extract price from text
 
-            // Add the item and its price to the cart array
-            cartItems.push({ name: itemName, price: itemPrice });
+            // Check if the item is already in the cart
+            const existingItem = cartItems.find(cartItem => cartItem.name === itemName);
 
-            // Increment cart count and update the span
-            cartCount++;
-            cartItemCount.textContent = cartCount;
+            if (existingItem) {
+                // If item exists, increment its quantity
+                existingItem.quantity++;
+            } else {
+                // If item doesn't exist, add it with quantity 1
+                cartItems.push({ name: itemName, price: itemPrice, quantity: 1 });
+            }
 
-            // Save updated cart items to sessionStorage
+            // Update cart count and save updated cart to sessionStorage
+            updateCartCount();
             sessionStorage.setItem('cartItems', JSON.stringify(cartItems));
+
+            console.log(`Added to cart: ${itemName} | Price: P${itemPrice}`);
         });
     });
 };
